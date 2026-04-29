@@ -1,0 +1,21 @@
+name: Levo Code Scan
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Levo Code Scanner
+        uses: levoai/actions/scan@main
+        with:
+          authorization-key: "eyJhbGciOiJSUzI1NiIsImtpZCI6IlNLMmJLRmp2cnZudUZaM1gzOWJVR0xFZDhCTzh2IiwidHlwIjoiSldUIn0.eyJhbXIiOlsib2F1dGgiXSwiZHJuIjoiRFNSIiwiZHYiOjEsImVtYWlsIjoiZGl4aXQucGFodWphQGxldm8uYWkiLCJleHAiOjIxMTYxNDU1MTAsImlhdCI6MTc3NzQ1NzUxMCwiaXNzIjoiUDJiS0Zqc2VkZDlZMEdGeERiZDdQTkN4WWhRMSIsInN1YiI6IlUzOFRRUzUwRmd0c1pRS3U0bnZzenZVREx5MW4iLCJzeXN0ZW1fdXNlciI6bnVsbCwidXNlcl9pZCI6IjdjMjE0OTk5LTE5MjktNDg4ZS05NTc5LWQxZTdkNTVjYzBjYyJ9.dYRrfizQ5zNctxBubpDgF62ZiHMd0W0tp_awxQldRxE0ACCdcsYsqGw7OcFR6JI8zrhD4xXDOyKHHTngwwIptNLWVZFF8pDeWRVhi0xdkGvlCwADq_LsCKgoB_zfrF7egfEStrRO-RKgE8Pl2XiC9XhK2L1_bKIB8Mg3nnDGRHdoOSqAXu1r6yiOHdQ-sdz4lC9Fy6KOGal02Jgn059F3Y-2tDLwSZRBtVBxIWR5qDTys6QzHDP185xrJAONncc5kNxCt3vLYgCJCBUyHYs7J9Zfl9WtNQtuapEGcsFecekCE5JB-IGZ5JwMH5LRj0DszGwzYw9pP9UkVdidO1JYbw"
+          organization-id: "6ffd1178-9643-42f0-8930-3447fb7b0908"
+          app-name: "eShop"
+          language: "java"
+          env-name: "staging"
