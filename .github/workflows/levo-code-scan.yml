@@ -19,3 +19,4 @@ jobs:
           app-name: "eShop"
           language: "java"
           env-name: "staging"
+          saas-url: "https://api.dev.levo.ai"   # <-- this is missing
